@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {StyleSheet, SafeAreaView, Text} from 'react-native';
+import {useClock} from './src/hooks/useClock';
 
 export default function App() {
-  const time = new Date();
+  const time = useClock();
+
   return (
     <SafeAreaView style={styles.safeAreaView}>
       <Text style={[styles.digitFont, styles.time]}>
         {time.toLocaleTimeString()}
       </Text>
+      <Text style={styles.digitFont}>{time.toLocaleDateString()}</Text>
     </SafeAreaView>
   );
 }
