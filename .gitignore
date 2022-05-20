@@ -1,5 +1,7 @@
-ch02
+.gitignore
 
 ch02/
 ch03/
 ch05/
+
+00_*.md
