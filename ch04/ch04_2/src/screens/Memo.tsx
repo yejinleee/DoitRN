@@ -13,7 +13,7 @@ export default function Memo() {
     //createOrUse함수 대신 리액트제공 useMemo훅 사용!!
     () => D.makeArray(2).map(D.createRandomPerson),
     [
-      //time
+      // time //이부분을 주석 처리 한다면 time은 1초마다 변하니까 이 콜백함수가 1초마다 재실행 됨.
     ],
   );
   return (

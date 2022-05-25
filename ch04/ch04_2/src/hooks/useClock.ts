@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from 'react';
 
-export function useClock() {
+export const useClock = () => {
   const [time, setTime] = useState(new Date());
   useEffect(() => {
     const id = setInterval(() => {
@@ -11,4 +11,4 @@ export function useClock() {
     return () => clearInterval(id);
   }, []);
   return time;
-}
+};
