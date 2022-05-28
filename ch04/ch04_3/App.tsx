@@ -1,12 +1,13 @@
-import React, {useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 import type {FC} from 'react';
 //prettier-ignore
 import {SafeAreaView, StyleSheet, FlatList, View, ScrollView, Dimensions, Text} from 'react-native';
 import {Colors} from 'react-native-paper';
 import PersonUsingValueState from './src/screens/PeresonUsingValueState';
 import PeresonUsingObjectState from './src/screens/PeresonUsingObjectState';
-import PeresonUsingPassingState from './src/screens/PeresonUsingPassingState';
+import PeresonUsingPassingState from './src/screens/PersonUsingPassingState';
 import * as D from './src/data';
+import TopBar from './src/screens/TopBar';
 
 const {width} = Dimensions.get('window');
 
@@ -24,7 +25,8 @@ const numberOfComponents = personInformation.length;
 
 //prettier-ignore
 export default function App() {
-  const people = useMemo(() => D.makeArray(10).map(D.createRandomPerson),[]);
+  // const people = useMemo(() => D.makeArray(10).map(D.createRandomPerson),[]);
+  const [people, setPeople] = useState<D.IPerson[]>([]);
   const children = useMemo(() =>
     personInformation.map(({title, Component}: PersonInformation) => (
       <View style={styles.flex} key={title}>
@@ -35,9 +37,10 @@ export default function App() {
           ItemSeparatorComponent={() => <View style={styles.itemSeparator} />} />
       </View>
     ))
-    , []);
+    , [people]); // deps를 설정해주어야 값이 바뀔때마다 다시 캐시하게 할 수 있음. 교재에선 people.length
     return (
       <SafeAreaView style={styles.flex}>
+        <TopBar setPeople={setPeople} />
         <ScrollView horizontal
           contentContainerStyle={styles.horizontalScrollView}>
             {children}
