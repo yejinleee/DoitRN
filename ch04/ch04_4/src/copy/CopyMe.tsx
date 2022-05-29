@@ -12,5 +12,5 @@ export default function CopyMe() {
 }
 const styles = StyleSheet.create({
   view: {flex: 1, padding: 5, backgroundColor: Colors.blue900},
-  text: {fontSize: 2, color: 'white'},
+  text: {fontSize: 20, color: 'white'},
 });

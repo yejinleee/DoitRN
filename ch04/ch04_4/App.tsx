@@ -12,7 +12,7 @@ export default function App() {
   const selects = useMemo(() => ['lifeCycle', 'timer', 'interval', 'fetch'], []);
   const [select, setSelect] = useState<string>(selects[0]);
   const onPress = useCallback((text) => () => setSelect(text), []);
-  const buttons = useMemo(() => 
+  const buttons = useMemo(() =>
     selects.map((text) => (
       <Text key={text} onPress={onPress(text)} style={styles.button}>
         {text}
@@ -22,11 +22,11 @@ export default function App() {
     <SafeAreaView style={styles.safeAreaView}>
       <View style={styles.topBar}>{buttons}</View>
       {select === 'lifeCycle' && <LifeCycle />}
-      {select === 'lifeCycle' && <Timer />}
-      {select === 'lifeCycle' && <Interval />}
-      {select === 'lifeCycle' && <Fetch />}
+      {select === 'timer' && <Timer />}
+      {select === 'interval' && <Interval />}
+      {select === 'fetch' && <Fetch />}
     </SafeAreaView>
-  )
+  );
 }
 //prettier-ignore
 const styles = StyleSheet.create({
