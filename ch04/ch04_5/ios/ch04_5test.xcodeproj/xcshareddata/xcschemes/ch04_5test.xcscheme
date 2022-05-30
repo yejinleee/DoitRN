@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ch04_4.app"
-               BlueprintName = "ch04_4"
-               ReferencedContainer = "container:ch04_4.xcodeproj">
+               BuildableName = "ch04_5test.app"
+               BlueprintName = "ch04_5test"
+               ReferencedContainer = "container:ch04_5test.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ch04_4Tests.xctest"
-               BlueprintName = "ch04_4Tests"
-               ReferencedContainer = "container:ch04_4.xcodeproj">
+               BuildableName = "ch04_5testTests.xctest"
+               BlueprintName = "ch04_5testTests"
+               ReferencedContainer = "container:ch04_5test.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ch04_4.app"
-            BlueprintName = "ch04_4"
-            ReferencedContainer = "container:ch04_4.xcodeproj">
+            BuildableName = "ch04_5test.app"
+            BlueprintName = "ch04_5test"
+            ReferencedContainer = "container:ch04_5test.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ch04_4.app"
-            BlueprintName = "ch04_4"
-            ReferencedContainer = "container:ch04_4.xcodeproj">
+            BuildableName = "ch04_5test.app"
+            BlueprintName = "ch04_5test"
+            ReferencedContainer = "container:ch04_5test.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

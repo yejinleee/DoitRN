@@ -1,4 +1,4 @@
-package com.ch04_4;
+package com.ch04_5test;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -12,7 +12,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "ch04_4";
+    return "ch04_5test";
   }
 
   /**
