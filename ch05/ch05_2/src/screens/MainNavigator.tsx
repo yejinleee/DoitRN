@@ -12,7 +12,7 @@ export default function MainNavigator() {
     {key: 'home', title: 'Home', icon: 'home'},
     {key: 'input', title: 'Input', icon: 'home'},
     {key: 'avoid', title: 'KeyboardAvoid', icon: 'home'},
-    {key: 'awrae', title: 'KeyboardAware', icon: 'home'},
+    {key: 'aware', title: 'KeyboardAware', icon: 'home'},
     {key: 'auto', title: 'AutoFocus', icon: 'home'},
   ]);
 

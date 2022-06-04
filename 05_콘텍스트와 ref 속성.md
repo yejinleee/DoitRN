@@ -69,4 +69,34 @@ _ref변수.current?.메서드()
   flatListRef.current?. 에서 ?. 인 이유는<br/>
   flatListReft 타입이 RefObject<FlatList | null>이기 때문에 current 속성값이 null일수도 있기 때문이다.
 
+### Input.tsx 파일 구현 : 키보드
+
+#### TextInput 컴포넌트에서의 useRef 훅 활용 방법
+
+키보드 API를 제공함
+
+keyboard.dismiss() // 키보드를 강제로 내림
+
+#### KeyboardAvoidingView 코어 컴포넌트 : 키보드가 올라오면 스크롤하여 가려지지 않도록 해줌
+
+import {KeyboardAvoidingView} from 'react-native'
+
+TextInput컴포넌트를 자식 요소로 둔다.
+
+이 컴포넌트 또한 View이기 때문에 flex 스타일 속성을 둘 수 있다.
+
+그런데, 키보드가 화면 요소를 조금 가리는 문제 .... !
+
+\- > KeyboardAwareScrollView 이용하기 ! Input 컴포넌트들 감싸기
+
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
+
+#### KeyboardAwareScrollView의 scrollToFocusedInput 메서드
+
+scrollFocusedInput : ref로 포커스된 textInput을 수직방향 스크롤을 통해 항상 화면에 나타나도록 함
+
+### AutoFocusProvider 컴포넌트와 useAutoFocus 커스텀 훅
+
+<!-- -->
+
 # 05-3 useImperativeHandle 훅 이해하기

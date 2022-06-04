@@ -14,7 +14,7 @@ export type PersonProps = {
 };
 
 // prettier-ignore
-const Person: FC<PersonProps> = ({person: initialPerson}) => { //initialPerson타입이 어디서온걸까뭘까
+const Person: FC<PersonProps> = ({person: initialPerson}) => { // p233. 변하는 매개변수는 다른이름으로 사용하도록 initialPerson이라는 새 이름 지어준것.
   const avatarPressed = useCallback(() => Alert.alert('avatar pressed'),[]);
   const deletePressed = useCallback(() => Alert.alert('delete pressed'),[]);
 
@@ -25,7 +25,7 @@ const Person: FC<PersonProps> = ({person: initialPerson}) => { //initialPerson�
   const commentPressed = useCallback(()=> {setComment(comment => comment + 1);}, []);
   const retweetPressed = useCallback(()=> {setRetweet(retweet => retweet + 1);}, []);
   const heartPressed = useCallback(()=> {setHeart(heart => heart + 1);}, []);
-
+  
   return (
     <View style={[styles.view]}>
       <View style={[styles.leftView]}>

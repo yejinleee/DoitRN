@@ -1,21 +1,30 @@
-import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import React, {useCallback, useRef, useState} from 'react';
+import {View, Text, StyleSheet, Keyboard} from 'react-native';
 import {TextInput, useTheme} from 'react-native-paper';
 import * as D from '../data';
 
 export default function Input() {
   const [person, setPerson] = useState<D.IPerson[]>([D.createRandomPerson()]);
   const {dark, colors} = useTheme();
+
+  const textInputRef = useRef<TextInput | null>(null);
+  const setFocus = useCallback(
+    () => textInputRef.current?.focus(),
+    [textInputRef.current],
+  );
   return (
     <View style={[styles.view, {backgroundColor: colors.surface}]}>
       <View style={[styles.topBar, {backgroundColor: colors.accent}]}>
-        <Text style={[styles.textButton]}>focus</Text>
-        <Text style={[styles.textButton]}>dismiss keyboard</Text>
+        <Text style={[styles.textButton]} onPress={setFocus}>focus</Text>
+        <Text style={[styles.textButton]} onPress={Keyboard.dismiss}>dismiss keyboard</Text>
         <View style={{flex: 1}} />
       </View>
+      <View style={[{flex: 1}]} />
+      {/* flex:1 즉 남은 화면 전체를 차지하는 컴포거가 있기 때문에 아래의 인풋 컴포들은 젤 아래로 밀린다 */}
       <View style={[styles.textView]}>
         <Text style={[styles.text, {color: colors.text}]}>email</Text>
         <TextInput
+          ref={textInputRef}
           style={[
             styles.textInput,
             {color: colors.text, borderColor: colors.placeholder},
