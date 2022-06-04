@@ -49,6 +49,7 @@ _ref변수.current?.메서드()
   콘텐츠의 넓이나 높이가 변하면 설정된 콜백함수를 호출한다.
 
 * 자동 스크롤 기능
+
   ```
   const flatListRef = useRef<FlatList | null>(null);
   const onContentSizeChange = useCallback(
@@ -64,5 +65,8 @@ _ref변수.current?.메서드()
     onContentSizeChange={onContentSizeChange}
     />
   ```
+
+  flatListRef.current?. 에서 ?. 인 이유는<br/>
+  flatListReft 타입이 RefObject<FlatList | null>이기 때문에 current 속성값이 null일수도 있기 때문이다.
 
 # 05-3 useImperativeHandle 훅 이해하기
