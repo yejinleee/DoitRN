@@ -7,6 +7,13 @@ ch04/ch04_1/
 ch04/ch04_5_err
 # 04_5빌드안됨
 
+ch07_2/
+ch07_2new/
+ch07_3/
+ch07_4/
+
+*/node_modules
+
 00_*.md
 
 cpch00_0/
