@@ -19,8 +19,11 @@
 <!-- react-native-appearance 설치하지 않음 -->
 
 `npm i react-native-localize moment moment-with-locales-es6`
+
 `npm i -D @types/react-native-vector-icons @types/color @types/faker@5.5.3`
+
 `npx react-native link react-native-vector-icons`
+
 `npm i react-native-keyboard-aware-scroll-view`
 
 ### ref 속성이란?
